@@ -1,6 +1,8 @@
 import ast
 import asyncio
+from collections import Counter
 from datetime import datetime
+import math
 import re
 from urllib.parse import urljoin
 import zoneinfo
@@ -64,8 +66,20 @@ class ParlayScraper:
 
         today = datetime.now(zoneinfo.ZoneInfo("Asia/Jakarta")).strftime("%Y-%m-%d")
         kickoff_iso = f"{today}T20:00:00"
+        scraped_matches = self._extract_market_picks(payload, kickoff_iso)
+        counts = Counter(item["market_type"] for item in scraped_matches)
+        print(
+            "  [Scraper] Extracted market selections: "
+            f"1X2={counts.get('1X2', 0)}, HDP={counts.get('HDP', 0)}, "
+            f"O/U={counts.get('O/U', 0)}."
+        )
+        return scraped_matches
+
+    @classmethod
+    def _extract_market_picks(cls, payload: list, kickoff_iso: str) -> list:
+        """Read full-time 1X2, HDP and O/U selections from the linked-row feed."""
         scraped_matches = []
-        seen_matches = set()
+        best_prices = {}
 
         for league in payload[3]:
             if not isinstance(league, list) or len(league) < 2:
@@ -78,49 +92,116 @@ class ParlayScraper:
                 continue
 
             for row in match_rows:
-                if not isinstance(row, list) or len(row) <= 13:
+                if not isinstance(row, list) or len(row) <= 7:
                     continue
 
-                home = self._clean_team_name(row[6])
-                away = self._clean_team_name(row[7])
+                home = cls._clean_team_name(row[6])
+                away = cls._clean_team_name(row[7])
                 if not home or not away:
                     continue
 
-                home_odds = self._parse_odds(row[11])
-                away_odds = self._parse_odds(row[13])
-                if home_odds is None and away_odds is None:
-                    continue
-
                 event_time = str(row[4]).strip() if len(row) > 4 else ""
-                match_key = (
+                event_key = (
                     str(league_info[0]),
                     home.casefold(),
                     away.casefold(),
                     event_time.casefold(),
                 )
-                if match_key in seen_matches:
-                    continue
-                seen_matches.add(match_key)
+                picks = []
 
-                if home_odds is not None and (away_odds is None or home_odds <= away_odds):
-                    selected_team = home
-                    selected_odds = home_odds
-                    pick_type = "Home Win"
-                else:
-                    selected_team = away
-                    selected_odds = away_odds
-                    pick_type = "Away Win"
+                # Full-time 1X2 values are already decimal odds: home, draw, away.
+                if len(row) > 13 and cls._feed_flag(row[9]):
+                    for selection, side, selected_team, odds_index, label in (
+                        ("home", "home", home, 11, "Home Win"),
+                        ("draw", None, "Draw", 12, "Draw"),
+                        ("away", "away", away, 13, "Away Win"),
+                    ):
+                        odds = cls._parse_odds(row[odds_index])
+                        if odds is not None:
+                            picks.append({
+                                "market_type": "1X2",
+                                "selection": selection,
+                                "selection_side": side,
+                                "selection_label": label,
+                                "selected_pick": selected_team,
+                                "market_line": None,
+                                "odds_value": odds,
+                            })
 
-                scraped_matches.append({
-                    "home": home,
-                    "away": away,
-                    "selected_pick": selected_team,
-                    "pick_type": pick_type,
-                    "odds_value": selected_odds,
-                    "kickoff_iso": kickoff_iso,
-                })
+                # HDP prices are stored in tenths (20.6 is displayed as 2.06).
+                if (
+                    len(row) > 18
+                    and cls._feed_flag(row[14])
+                    and cls._market_odds_available(row[16])
+                ):
+                    handicap = cls._parse_line(row[15])
+                    if handicap is not None:
+                        handicap = abs(handicap)
+                        home_gives_handicap = cls._feed_flag(row[5])
+                        for side, selected_team, odds_index in (
+                            ("home", home, 17),
+                            ("away", away, 18),
+                        ):
+                            team_gives_handicap = (
+                                home_gives_handicap if side == "home" else not home_gives_handicap
+                            )
+                            signed_handicap = -handicap if team_gives_handicap else handicap
+                            odds = cls._parse_odds(row[odds_index], divisor=10.0)
+                            if odds is not None:
+                                picks.append({
+                                    "market_type": "HDP",
+                                    "selection": side,
+                                    "selection_side": side,
+                                    "selection_label": f"{side.title()} Handicap",
+                                    "selected_pick": selected_team,
+                                    "market_line": signed_handicap,
+                                    "odds_value": odds,
+                                })
 
-        print(f"  [Scraper] Extracted {len(scraped_matches)} unique matches from odds feed.")
+                # Full-time O/U uses a total-goals line and prices in tenths.
+                if (
+                    len(row) > 25
+                    and cls._feed_flag(row[19])
+                    and cls._market_odds_available(row[23])
+                ):
+                    total_line = cls._parse_line(row[20])
+                    if total_line is not None:
+                        for selection, odds_index in (("over", 24), ("under", 25)):
+                            odds = cls._parse_odds(row[odds_index], divisor=10.0)
+                            if odds is not None:
+                                picks.append({
+                                    "market_type": "O/U",
+                                    "selection": selection,
+                                    "selection_side": None,
+                                    "selection_label": selection.title(),
+                                    "selected_pick": f"{selection.title()} {total_line:g}",
+                                    "market_line": total_line,
+                                    "odds_value": odds,
+                                })
+
+                for pick in picks:
+                    line_key = (
+                        round(pick["market_line"], 3)
+                        if pick["market_line"] is not None
+                        else None
+                    )
+                    pick_key = event_key + (
+                        pick["market_type"],
+                        pick["selection"],
+                        line_key,
+                    )
+                    candidate = {
+                        "home": home,
+                        "away": away,
+                        **pick,
+                        "pick_type": pick["selection_label"],
+                        "kickoff_iso": kickoff_iso,
+                    }
+                    current = best_prices.get(pick_key)
+                    if current is None or candidate["odds_value"] > current["odds_value"]:
+                        best_prices[pick_key] = candidate
+
+        scraped_matches.extend(best_prices.values())
         return scraped_matches
 
     @staticmethod
@@ -128,9 +209,36 @@ class ParlayScraper:
         return BeautifulSoup(str(value), "html.parser").get_text(" ", strip=True)
 
     @staticmethod
-    def _parse_odds(value):
+    def _parse_odds(value, divisor=1.0):
         try:
-            odds = float(str(value).replace(",", "."))
+            odds = float(str(value).replace(",", ".")) / divisor
         except (TypeError, ValueError):
             return None
-        return odds if 1.01 <= odds <= 10.0 else None
+        return odds if math.isfinite(odds) and 1.01 <= odds <= 10.0 else None
+
+    @staticmethod
+    def _parse_line(value):
+        try:
+            line = float(str(value).replace(",", "."))
+        except (TypeError, ValueError):
+            return None
+        if not math.isfinite(line) or line < 0 or line > 10:
+            return None
+        return line
+
+    @staticmethod
+    def _feed_flag(value):
+        if isinstance(value, bool):
+            return value
+        try:
+            return float(value) != 0
+        except (TypeError, ValueError):
+            return str(value).strip().casefold() in {"true", "yes"}
+
+    @staticmethod
+    def _market_odds_available(value):
+        try:
+            odds_marker = float(value)
+        except (TypeError, ValueError):
+            return False
+        return math.isfinite(odds_marker) and not (-1 < odds_marker < 1)

@@ -397,6 +397,7 @@ class FotMobClient:
             if str(home_id) != str(team_id) and str(away_id) != str(team_id):
                 continue
             completed.append({
+                "fixture_id": fixture.get("id"),
                 "utc_time": status.get("utcTime", ""),
                 "home_id": home_id,
                 "away_id": away_id,
@@ -407,6 +408,7 @@ class FotMobClient:
         completed.sort(key=lambda fixture: fixture["utc_time"], reverse=True)
         latest_five = completed[:5]
         form_chars = []
+        recent_matches = []
         venue_stats = {
             "home": {"played": 0, "wins": 0, "draws": 0, "loses": 0},
             "away": {"played": 0, "wins": 0, "draws": 0, "loses": 0},
@@ -429,14 +431,27 @@ class FotMobClient:
             is_home = str(fixture["home_id"]) == str(team_id)
             team_goals = fixture["home_score"] if is_home else fixture["away_score"]
             opponent_goals = fixture["away_score"] if is_home else fixture["home_score"]
-            form_chars.append(
+            result = (
                 "W" if team_goals > opponent_goals
                 else "D" if team_goals == opponent_goals
                 else "L"
             )
+            form_chars.append(result)
+            recent_matches.append({
+                "fixture_id": fixture.get("fixture_id"),
+                "utc_time": fixture["utc_time"],
+                "home_id": fixture["home_id"],
+                "away_id": fixture["away_id"],
+                "home_goals": fixture["home_score"],
+                "away_goals": fixture["away_score"],
+                "team_goals": team_goals,
+                "opponent_goals": opponent_goals,
+                "result": result,
+            })
 
         return {
             "form": "".join(form_chars),
+            "recent_matches": recent_matches,
             "fixtures": {
                 "played": {venue: stats["played"] for venue, stats in venue_stats.items()},
                 "wins": {venue: stats["wins"] for venue, stats in venue_stats.items()},
