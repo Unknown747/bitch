@@ -65,11 +65,16 @@ class APIFootballClient:
             with open(cache_file, "r") as f:
                 return json.load(f)[:last_n]
 
-        params = {'h2h': f"{team_id_1}-{team_id_2}", 'last': last_n}
+        # The Free API plan rejects the `last` parameter; trim the response locally instead.
+        params = {'h2h': f"{team_id_1}-{team_id_2}"}
         try:
             response = requests.get(f"{self.base_url}/fixtures/headtohead", headers=self.headers, params=params, timeout=15)
             response.raise_for_status()
             res_json = response.json()
+            errors = res_json.get('errors')
+            if errors:
+                print(f"❌ API-Football H2H API error: {errors}")
+                return []
             data = res_json.get('response', [])
         except Exception as e:
             print(f"❌ Error fetching H2H: {e}")
