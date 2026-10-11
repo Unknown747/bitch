@@ -15,6 +15,22 @@ from modules.scraper import ParlayScraper
 from modules.api_football import APIFootballClient
 from modules.matcher import EntityMatcher
 from modules.filter_engine import ParlayFilterEngine
+from modules.slip_writer import write_result_slip
+
+
+TOP_5_EUROPEAN_LEAGUES = {
+    39: "Premier League",
+    140: "La Liga",
+    135: "Serie A",
+    78: "Bundesliga",
+    61: "Ligue 1",
+}
+
+
+def _save_slip(picks, reason=None):
+    slip_path = write_result_slip(picks, reason=reason)
+    print(f"  └─ Result slip saved: {slip_path}")
+    return slip_path
 
 
 async def run_pipeline():
@@ -30,6 +46,7 @@ async def run_pipeline():
 
     if not odds_data:
         print("  ❌ [ABORT] Tidak ada data odds yang di-scrape. Pipeline dihentikan.")
+        _save_slip([], reason="Tidak ada data odds yang berhasil diambil.")
         return []
 
     # STEP 2: FETCH API FIXTURES
@@ -40,11 +57,19 @@ async def run_pipeline():
 
     api_key = os.getenv("FOOTBALL_API_KEY", FOOTBALL_API_KEY)
     api_client = APIFootballClient(api_key=api_key)
-    api_fixtures = api_client.get_fixtures_by_date(today_str)
-    print(f"  └─ Total API Fixtures Returned: {len(api_fixtures)}")
+    all_api_fixtures = api_client.get_fixtures_by_date(today_str)
+    api_fixtures = [
+        fixture for fixture in all_api_fixtures
+        if int(fixture.get('league_id') or 0) in TOP_5_EUROPEAN_LEAGUES
+    ]
+    print(
+        f"  └─ Top 5 European Fixtures: {len(api_fixtures)} "
+        f"of {len(all_api_fixtures)} total API fixtures"
+    )
 
     if not api_fixtures:
-        print("  ❌ [ABORT] API-Football tidak mengembalikan fixture. Pipeline dihentikan.")
+        print("  ❌ [ABORT] Tidak ada fixture Top 5 Eropa dari API-Football.")
+        _save_slip([], reason="Tidak ada fixture Top 5 Eropa untuk tanggal ini.")
         return []
 
     # STEP 3: ENTITY MATCHING
@@ -55,6 +80,7 @@ async def run_pipeline():
 
     if not matched_results:
         print("  ❌ [ABORT] Tidak ada pertandingan yang berhasil dicocokkan.")
+        _save_slip([], reason="Tidak ada pertandingan Top 5 Eropa yang berhasil dicocokkan.")
         return []
 
     # STEP 4: API INGESTION & EVALUATION
@@ -113,6 +139,17 @@ async def run_pipeline():
 
     for idx, pick in enumerate(final_picks, 1):
         print(f"  {idx}. {pick['match']} | PASANG: {pick['pick']} ({pick['pick_type']}) | Odds: {pick['selected_odds']} | EV: {pick['expected_value']}")
+
+    if final_picks:
+        _save_slip(final_picks)
+    else:
+        _save_slip(
+            [],
+            reason=(
+                "Tidak ada pilihan yang memenuhi batas minimum EV "
+                f"{MIN_EXPECTED_VALUE * 100:.2f}%. Batas EV tidak diturunkan otomatis."
+            ),
+        )
 
     print("\n✅ PIPELINE EXECUTION COMPLETED SUCCESSFULLY!")
     return final_picks

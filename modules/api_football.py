@@ -1,15 +1,57 @@
 import os
 import json
 import requests
+import time
 from typing import Dict, List
 
 class APIFootballClient:
-    def __init__(self, api_key: str, cache_dir: str = "data/cache"):
+    def __init__(
+        self,
+        api_key: str,
+        cache_dir: str = "data/cache",
+        request_delay_seconds: float = 7.0,
+    ):
         self.api_key = api_key
         self.base_url = "https://v3.football.api-sports.io"
         self.headers = {'x-apisports-key': self.api_key}
         self.cache_dir = cache_dir
+        self.request_delay_seconds = max(0.0, float(request_delay_seconds))
+        self._last_request_at = None
         os.makedirs(cache_dir, exist_ok=True)
+
+    def _request(self, endpoint: str, params: Dict) -> requests.Response:
+        if self._last_request_at is not None:
+            elapsed = time.monotonic() - self._last_request_at
+            wait_seconds = self.request_delay_seconds - elapsed
+            if wait_seconds > 0:
+                print(f"  [API] Waiting {wait_seconds:.1f}s before next request.")
+                time.sleep(wait_seconds)
+
+        self._last_request_at = time.monotonic()
+        return requests.get(
+            f"{self.base_url}/{endpoint}",
+            headers=self.headers,
+            params=params,
+            timeout=15,
+        )
+
+    def _request_json(self, endpoint: str, params: Dict, label: str):
+        try:
+            response = self._request(endpoint, params)
+            response.raise_for_status()
+            payload = response.json()
+            if not isinstance(payload, dict):
+                print(f"❌ API-Football returned an unexpected response for {label}.")
+                return None
+
+            errors = payload.get('errors')
+            if errors:
+                print(f"❌ API-Football {label} error: {errors}")
+                return None
+            return payload
+        except Exception as exc:
+            print(f"❌ Error fetching {label}: {exc}")
+            return None
 
     def get_fixtures_by_date(self, date_str: str) -> List[Dict]:
         """
@@ -22,18 +64,10 @@ class APIFootballClient:
                 return json.load(f)
 
         params = {'date': date_str}
-        try:
-            response = requests.get(f"{self.base_url}/fixtures", headers=self.headers, params=params, timeout=15)
-            response.raise_for_status()
-            res_json = response.json()
-
-            if res_json.get('errors'):
-                print(f"  [API Debug Error]: {res_json.get('errors')}")
-
-            data = res_json.get('response', [])
-        except Exception as e:
-            print(f"❌ Error fetching fixtures: {e}")
+        res_json = self._request_json("fixtures", params, "fixtures")
+        if res_json is None:
             return []
+        data = res_json.get('response', [])
 
         formatted = []
         for item in data:
@@ -67,18 +101,10 @@ class APIFootballClient:
 
         # The Free API plan rejects the `last` parameter; trim the response locally instead.
         params = {'h2h': f"{team_id_1}-{team_id_2}"}
-        try:
-            response = requests.get(f"{self.base_url}/fixtures/headtohead", headers=self.headers, params=params, timeout=15)
-            response.raise_for_status()
-            res_json = response.json()
-            errors = res_json.get('errors')
-            if errors:
-                print(f"❌ API-Football H2H API error: {errors}")
-                return []
-            data = res_json.get('response', [])
-        except Exception as e:
-            print(f"❌ Error fetching H2H: {e}")
+        res_json = self._request_json("fixtures/headtohead", params, "H2H")
+        if res_json is None:
             return []
+        data = res_json.get('response', [])
 
         formatted = []
         for item in data:
@@ -115,65 +141,84 @@ class APIFootballClient:
                 return json.load(f)
 
         params = {'team': team_id, 'league': league_id, 'season': season}
+        payload = self._request_json(
+            "teams/statistics",
+            params,
+            f"statistics for team {team_id}",
+        )
         data = {}
-        try:
-            response = requests.get(f"{self.base_url}/teams/statistics", headers=self.headers, params=params, timeout=15)
-            if response.status_code == 200:
-                raw_res = response.json().get('response', {})
-                # Proteksi agar data selalu berupa dictionary, bukan list kosong []
-                if isinstance(raw_res, dict):
-                    data = raw_res
-                elif isinstance(raw_res, list) and len(raw_res) > 0 and isinstance(raw_res[0], dict):
-                    data = raw_res[0]
-        except Exception as e:
-            print(f"❌ Error fetching stats for team {team_id}: {e}")
+        api_failed = payload is None
+        raw_res = payload.get('response', {}) if payload else {}
+        if isinstance(raw_res, dict):
+            data = raw_res
+        elif isinstance(raw_res, list) and raw_res and isinstance(raw_res[0], dict):
+            data = raw_res[0]
 
         raw_form = data.get("form", "") if isinstance(data, dict) else ""
 
         # Fallback 1: Coba season alternatif (+1/2026) jika season berjalan belum/sudah usai
-        if not raw_form:
-            try:
-                alt_params = {'team': team_id, 'league': league_id, 'season': season + 1}
-                res_alt = requests.get(f"{self.base_url}/teams/statistics", headers=self.headers, params=alt_params, timeout=15)
-                if res_alt.status_code == 200:
-                    raw_alt = res_alt.json().get('response', {})
-                    if isinstance(raw_alt, dict):
-                        data_alt = raw_alt
-                    elif isinstance(raw_alt, list) and len(raw_alt) > 0 and isinstance(raw_alt[0], dict):
-                        data_alt = raw_alt[0]
-                    else:
-                        data_alt = {}
-                    raw_form = data_alt.get("form", "")
-            except Exception:
-                pass
+        if not raw_form and not api_failed:
+            alt_params = {'team': team_id, 'league': league_id, 'season': season + 1}
+            alt_payload = self._request_json(
+                "teams/statistics",
+                alt_params,
+                f"alternate-season statistics for team {team_id}",
+            )
+            if alt_payload is None:
+                api_failed = True
+            else:
+                raw_alt = alt_payload.get('response', {})
+                if isinstance(raw_alt, dict):
+                    data_alt = raw_alt
+                elif isinstance(raw_alt, list) and raw_alt and isinstance(raw_alt[0], dict):
+                    data_alt = raw_alt[0]
+                else:
+                    data_alt = {}
+                raw_form = data_alt.get("form", "")
+                if raw_form:
+                    data = data_alt
 
         # Fallback 2: Ambil langsung dari 5 laga terakhir tim jika endpoint statistik liga kosong
-        if not raw_form:
-            try:
-                fix_resp = requests.get(
-                    f"{self.base_url}/fixtures", 
-                    headers=self.headers, 
-                    params={'team': team_id, 'last': 5}, 
-                    timeout=15
-                )
-                if fix_resp.status_code == 200:
-                    last_fixtures = fix_resp.json().get('response', [])
-                    if isinstance(last_fixtures, list):
-                        form_chars = []
-                        for fix in last_fixtures:
-                            home_id = fix['teams']['home']['id']
-                            winner_home = fix['teams']['home']['winner']
-                            winner_away = fix['teams']['away']['winner']
-                            
-                            if (team_id == home_id and winner_home) or (team_id != home_id and winner_away):
-                                form_chars.append('W')
-                            elif winner_home is None or winner_away is None:
-                                form_chars.append('D')
-                            else:
-                                form_chars.append('L')
-                        raw_form = "".join(form_chars)
-            except Exception as ex:
-                print(f"⚠ Fallback fixture fetch error: {ex}")
+        if not raw_form and not api_failed:
+            fixture_params = {
+                'team': team_id,
+                'season': season + 1,
+                'status': 'FT',
+            }
+            fixture_payload = self._request_json(
+                "fixtures",
+                fixture_params,
+                f"recent fixtures for team {team_id}",
+            )
+            if fixture_payload is not None:
+                fixture_rows = fixture_payload.get('response', [])
+                if isinstance(fixture_rows, list):
+                    last_fixtures = sorted(
+                        fixture_rows,
+                        key=lambda fixture: fixture.get('fixture', {}).get('date', ''),
+                        reverse=True,
+                    )[:5]
+                    form_chars = []
+                    for fix in last_fixtures:
+                        teams = fix.get('teams', {})
+                        home = teams.get('home', {})
+                        away = teams.get('away', {})
+                        if str(team_id) == str(home.get('id')):
+                            selected_winner = home.get('winner')
+                            opponent_winner = away.get('winner')
+                        elif str(team_id) == str(away.get('id')):
+                            selected_winner = away.get('winner')
+                            opponent_winner = home.get('winner')
+                        else:
+                            continue
+
+                        if selected_winner is True:
+                            form_chars.append('W')
+                        elif opponent_winner is True:
+                            form_chars.append('L')
+                        else:
+                            form_chars.append('D')
+                    raw_form = "".join(form_chars)
 
         fixtures_dict = data.get("fixtures", {}) if isinstance(data, dict) else {}
 
