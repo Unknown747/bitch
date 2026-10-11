@@ -1,4 +1,4 @@
 - [Recommendation policy](recommendation-policy.md) — EV eligibility is strict; WhatsApp notifications are not wanted.
 - [Odds feed behavior](odds-feed-behavior.md) — The page is a JavaScript shell; odds arrive from a linked-row feed, not its initial HTML.
-- [API-Football Free plan](api-football-free-plan.md) — H2H requests must omit `last`; limit locally and inspect API errors even on HTTP 200.
+- [FotMob access policy](fotmob-access-policy.md) — Use cached, paced requests; the user accepted unofficial endpoints but FotMob disallows regular automated use.
 - [Sport scope](sport-scope.md) — This project handles football only; do not include cricket or other sports.

@@ -1,10 +1,9 @@
-import os
 import asyncio
 from datetime import datetime
+import sys
 import zoneinfo
 
 from config import (
-    FOOTBALL_API_KEY, 
     MIN_ODDS, 
     MAX_ODDS, 
     MIN_EXPECTED_VALUE, 
@@ -12,18 +11,18 @@ from config import (
     FUZZY_THRESHOLD
 )
 from modules.scraper import ParlayScraper
-from modules.api_football import APIFootballClient
+from modules.fotmob import FotMobClient, FotMobClientError
 from modules.matcher import EntityMatcher
 from modules.filter_engine import ParlayFilterEngine
 from modules.slip_writer import write_result_slip
 
 
 TOP_5_EUROPEAN_LEAGUES = {
-    39: "Premier League",
-    140: "La Liga",
-    135: "Serie A",
-    78: "Bundesliga",
-    61: "Ligue 1",
+    47: "Premier League",
+    87: "LaLiga",
+    55: "Serie A",
+    54: "Bundesliga",
+    53: "Ligue 1",
 }
 
 
@@ -50,32 +49,31 @@ async def run_pipeline():
         return []
 
     # STEP 2: FETCH API FIXTURES
-    print("\n[STEP 2/4] Fetching API-Football Fixtures...")
+    print("\n[STEP 2/4] Fetching FotMob Fixtures...")
     wib_tz = zoneinfo.ZoneInfo("Asia/Jakarta")
     today_str = datetime.now(wib_tz).strftime("%Y-%m-%d")
     print(f"  └─ Target Date (WIB): {today_str}")
 
-    api_key = os.getenv("FOOTBALL_API_KEY", FOOTBALL_API_KEY)
-    api_client = APIFootballClient(api_key=api_key)
-    all_api_fixtures = api_client.get_fixtures_by_date(today_str)
-    api_fixtures = [
-        fixture for fixture in all_api_fixtures
+    fotmob_client = FotMobClient()
+    all_fotmob_fixtures = fotmob_client.get_fixtures_by_date(today_str)
+    fotmob_fixtures = [
+        fixture for fixture in all_fotmob_fixtures
         if int(fixture.get('league_id') or 0) in TOP_5_EUROPEAN_LEAGUES
     ]
     print(
-        f"  └─ Top 5 European Fixtures: {len(api_fixtures)} "
-        f"of {len(all_api_fixtures)} total API fixtures"
+        f"  └─ Top 5 European Fixtures: {len(fotmob_fixtures)} "
+        f"of {len(all_fotmob_fixtures)} total FotMob fixtures"
     )
 
-    if not api_fixtures:
-        print("  ❌ [ABORT] Tidak ada fixture Top 5 Eropa dari API-Football.")
+    if not fotmob_fixtures:
+        print("  ❌ [ABORT] Tidak ada fixture Top 5 Eropa dari FotMob.")
         _save_slip([], reason="Tidak ada fixture Top 5 Eropa untuk tanggal ini.")
         return []
 
     # STEP 3: ENTITY MATCHING
-    print("\n[STEP 3/4] Matching Scraped Teams with Official API Entities...")
+    print("\n[STEP 3/4] Matching Scraped Teams with FotMob Entities...")
     matcher = EntityMatcher(time_window_minutes=TIME_WINDOW_MINUTES, threshold=FUZZY_THRESHOLD)
-    matched_results = matcher.match(odds_data, api_fixtures)
+    matched_results = matcher.match(odds_data, fotmob_fixtures)
     print(f"  └─ Total Successfully Matched Fixtures: {len(matched_results)}")
 
     if not matched_results:
@@ -84,7 +82,7 @@ async def run_pipeline():
         return []
 
     # STEP 4: API INGESTION & EVALUATION
-    print("\n[STEP 4/4] Ingesting Deep Stats & H2H from API-Football...")
+    print("\n[STEP 4/4] Ingesting Form & H2H from FotMob...")
     filtered_matched = []
     
     for idx, item in enumerate(matched_results, 1):
@@ -105,7 +103,10 @@ async def run_pipeline():
         # Ingest H2H
         h2h_data = []
         if home_id and away_id:
-            h2h_data = api_client.get_h2h_matches(team_id_1=home_id, team_id_2=away_id, last_n=5)
+            h2h_data = fotmob_client.get_h2h_matches(
+                fixture_id=api_item.get('fixture_id'),
+                last_n=5,
+            )
             print(f"     └─ H2H Matches Found: {len(h2h_data)}")
 
         item['api_data']['h2h'] = h2h_data
@@ -115,11 +116,9 @@ async def run_pipeline():
         selected_team_id = home_id if pick_type == 'Home Win' else away_id
         selected_stats = {}
         if selected_team_id and league_id:
-            current_year = datetime.now(wib_tz).year
-            selected_stats = api_client.get_team_statistics(
+            selected_stats = fotmob_client.get_team_statistics(
                 team_id=selected_team_id,
                 league_id=league_id,
-                season=current_year - 1
             )
         print(f"     └─ Selected Team Stats Fetched: Form='{selected_stats.get('form', 'N/A')}'")
 
@@ -156,4 +155,8 @@ async def run_pipeline():
 
 
 if __name__ == "__main__":
-    asyncio.run(run_pipeline())
+    try:
+        asyncio.run(run_pipeline())
+    except FotMobClientError as exc:
+        print(f"\n❌ FotMob request failed: {exc}", file=sys.stderr)
+        raise SystemExit(1) from exc

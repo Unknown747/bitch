@@ -1,8 +1,3 @@
-import os
-
-# API Configurations
-FOOTBALL_API_KEY = os.getenv("FOOTBALL_API_KEY", "")
-
 # Filter Engine Tuning Parameters (Hanya meloloskan +EV Positif)
 MIN_ODDS = 1.25              # Kisaran Odds aman untuk Parlay
 MAX_ODDS = 1.75              # Batas atas Odds
