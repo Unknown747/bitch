@@ -5,3 +5,8 @@ channel = "stable-25_05"
 
 [agent]
 expertMode = true
+
+[userenv]
+
+[userenv.shared]
+FOOTBALL_API_KEY = "b4f276b6efe1b0088e8a6924d66e93d6"
