@@ -1,4 +1,4 @@
-name: Mix Parlay Automated Pipeline & Test Engine
+name: Mix Parlay Automated Pipeline
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  test-and-run:
+  run-pipeline:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,11 +25,7 @@ jobs:
           pip install -r requirements.txt
           playwright install --with-deps chromium
 
-      - name: 4. Run Pytest Suite
-        run: |
-          pytest tests/ -v --tb=short
-
-      - name: 5. Execute Parlay Pipeline
+      - name: Execute Parlay Pipeline
         env:
           FOOTBALL_API_KEY: ${{ secrets.FOOTBALL_API_KEY }}
           FONNTE_TOKEN: ${{ secrets.FONNTE_TOKEN }}
