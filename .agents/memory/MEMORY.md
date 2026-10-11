@@ -1,0 +1,1 @@
+- [Recommendation policy](recommendation-policy.md) — EV eligibility is strict; WhatsApp notifications are not wanted.

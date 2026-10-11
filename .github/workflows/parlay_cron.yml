@@ -28,7 +28,5 @@ jobs:
       - name: Execute Parlay Pipeline
         env:
           FOOTBALL_API_KEY: ${{ secrets.FOOTBALL_API_KEY }}
-          FONNTE_TOKEN: ${{ secrets.FONNTE_TOKEN }}
-          WA_TARGET_NUMBER: ${{ secrets.WA_TARGET_NUMBER }}
         run: |
           python main.py

@@ -15,7 +15,6 @@ from modules.scraper import ParlayScraper
 from modules.api_football import APIFootballClient
 from modules.matcher import EntityMatcher
 from modules.filter_engine import ParlayFilterEngine
-from modules.wa_notifier import send_whatsapp_parlay_picks
 
 
 async def run_pipeline():
@@ -85,25 +84,26 @@ async def run_pipeline():
 
         item['api_data']['h2h'] = h2h_data
 
-        # Ingest Stats dengan season eksplisit
-        stats_data = {}
-        if home_id and league_id:
+        # Ambil statistik tim yang dipilih saja agar tidak menggandakan pemakaian kuota API.
+        pick_type = item['odds_data'].get('pick_type', 'Home Win')
+        selected_team_id = home_id if pick_type == 'Home Win' else away_id
+        selected_stats = {}
+        if selected_team_id and league_id:
             current_year = datetime.now(wib_tz).year
-            stats_data = api_client.get_team_statistics(
-                team_id=home_id, 
-                league_id=league_id, 
+            selected_stats = api_client.get_team_statistics(
+                team_id=selected_team_id,
+                league_id=league_id,
                 season=current_year - 1
             )
-            form_res = stats_data.get('form', 'N/A')
-            print(f"     └─ Team Stats Fetched: Form = '{form_res}'")
+        print(f"     └─ Selected Team Stats Fetched: Form='{selected_stats.get('form', 'N/A')}'")
 
-        item['api_data']['stats'] = stats_data
+        item['api_data']['selected_stats'] = selected_stats
         filtered_matched.append(item)
 
     print(f"\n  └─ Total Matches Passed to EV Evaluator: {len(filtered_matched)}")
 
     # EVALUATE
-    print("\n[EVALUATION] Calculating Real Probabilities & Expected Values...")
+    print("\n[EVALUATION] Estimasi probabilitas heuristik & EV (belum divalidasi historis)...")
     filter_engine = ParlayFilterEngine(min_odds=MIN_ODDS, max_odds=MAX_ODDS, min_ev=MIN_EXPECTED_VALUE)
     final_picks = filter_engine.evaluate(filtered_matched)
 
@@ -113,9 +113,6 @@ async def run_pipeline():
 
     for idx, pick in enumerate(final_picks, 1):
         print(f"  {idx}. {pick['match']} | PASANG: {pick['pick']} ({pick['pick_type']}) | Odds: {pick['selected_odds']} | EV: {pick['expected_value']}")
-
-    # WHATSAPP NOTIFICATION
-    send_whatsapp_parlay_picks(final_picks)
 
     print("\n✅ PIPELINE EXECUTION COMPLETED SUCCESSFULLY!")
     return final_picks
