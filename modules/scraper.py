@@ -1,135 +1,136 @@
+import ast
 import asyncio
 from datetime import datetime
+import re
+from urllib.parse import urljoin
 import zoneinfo
-from playwright.async_api import async_playwright
+
+import requests
+from bs4 import BeautifulSoup
+
 
 class ParlayScraper:
     def __init__(self, target_url="https://mainbolakaki.pro/_view/odds4.aspx"):
         self.url = target_url
+        self.user_agent = (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/122.0.0.0 Safari/537.36"
+        )
 
     async def fetch_odds_data(self) -> list:
+        return await asyncio.to_thread(self._fetch_odds_data)
+
+    def _fetch_odds_data(self) -> list:
+        with requests.Session() as session:
+            session.headers.update({"User-Agent": self.user_agent})
+
+            page_response = session.get(self.url, timeout=30)
+            page_response.raise_for_status()
+            page = BeautifulSoup(page_response.content, "html.parser")
+
+            feed_path = None
+            for script in page.find_all("script"):
+                script_text = script.get_text()
+                match = re.search(
+                    r"\bajaxToday\s*\(\s*(['\"])([^'\"]+)\1",
+                    script_text,
+                )
+                if match:
+                    feed_path = match.group(2)
+                    break
+
+            if not feed_path:
+                raise ValueError("Could not find the odds data feed URL in the page.")
+
+            feed_url = urljoin(page_response.url, feed_path)
+            feed_response = session.get(
+                feed_url,
+                headers={
+                    "Referer": page_response.url,
+                    "X-Requested-With": "XMLHttpRequest",
+                },
+                timeout=30,
+            )
+            feed_response.raise_for_status()
+
+        try:
+            payload = ast.literal_eval(feed_response.text.lstrip("\ufeff").replace(r"\/", "/"))
+        except (SyntaxError, ValueError) as exc:
+            raise ValueError("The odds feed format could not be parsed.") from exc
+
+        if not isinstance(payload, list) or len(payload) <= 3 or not isinstance(payload[3], list):
+            raise ValueError("The odds feed has an unexpected data structure.")
+
+        today = datetime.now(zoneinfo.ZoneInfo("Asia/Jakarta")).strftime("%Y-%m-%d")
+        kickoff_iso = f"{today}T20:00:00"
         scraped_matches = []
-        
-        async with async_playwright() as p:
-            browser = await p.chromium.launch(
-                headless=True,
-                args=[
-                    "--no-sandbox",
-                    "--disable-setuid-sandbox",
-                    "--disable-dev-shm-usage",
-                    "--disable-gpu"
-                ]
-            )
-            
-            context = await browser.new_context(
-                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-                viewport={"width": 1366, "height": 768},
-                locale="id-ID",
-                timezone_id="Asia/Jakarta"
-            )
-            
-            page = await context.new_page()
-            
-            try:
-                print(f"  [Scraper] Navigating to {self.url}...")
-                await page.goto(self.url, wait_until="networkidle", timeout=60000)
-                await page.wait_for_timeout(5000)
+        seen_matches = set()
 
-                wib_tz = zoneinfo.ZoneInfo("Asia/Jakarta")
-                today_date_str = datetime.now(wib_tz).strftime("%Y-%m-%d")
+        for league in payload[3]:
+            if not isinstance(league, list) or len(league) < 2:
+                continue
 
-                ignored_keywords = ["soccer", "mix parlay", "today", "select league", "odds", "home", "away", "time", "draw"]
+            league_info, match_rows = league[0], league[1]
+            if not isinstance(league_info, list) or len(league_info) < 2:
+                continue
+            if not isinstance(match_rows, list):
+                continue
 
-                for frame in page.frames:
-                    try:
-                        rows = await frame.query_selector_all("tr")
-                        for row in rows:
-                            text_content = await row.inner_text()
-                            lines = [line.strip() for line in text_content.split("\n") if line.strip()]
+            for row in match_rows:
+                if not isinstance(row, list) or len(row) <= 13:
+                    continue
 
-                            if len(lines) >= 3:
-                                # Abaikan jika merupakan header tabel
-                                if any(kw in lines[0].lower() or kw in lines[1].lower() for kw in ignored_keywords):
-                                    continue
+                home = self._clean_team_name(row[6])
+                away = self._clean_team_name(row[7])
+                if not home or not away:
+                    continue
 
-                                team_pairs = []
-                                i = 0
-                                while i < len(lines):
-                                    item = lines[i]
-                                    
-                                    # Abaikan label status/jam
-                                    if item.upper() in ["LIVE", "TODAY", "CANCEL"] or item.replace(":", "").isdigit():
-                                        i += 1
-                                        continue
+                home_odds = self._parse_odds(row[11])
+                away_odds = self._parse_odds(row[13])
+                if home_odds is None and away_odds is None:
+                    continue
 
-                                    # Cek jika baris ini merupakan nama tim
-                                    if len(item) > 2 and item.lower() not in ignored_keywords:
-                                        team_name = item
-                                        team_odds = None
+                event_time = str(row[4]).strip() if len(row) > 4 else ""
+                match_key = (
+                    str(league_info[0]),
+                    home.casefold(),
+                    away.casefold(),
+                    event_time.casefold(),
+                )
+                if match_key in seen_matches:
+                    continue
+                seen_matches.add(match_key)
 
-                                        # Cari odds milik tim tersebut di baris persis setelah nama tim
-                                        for lookahead in range(1, 3):
-                                            if i + lookahead < len(lines):
-                                                possible_odds = lines[i + lookahead].replace(",", ".")
-                                                try:
-                                                    val = float(possible_odds)
-                                                    if 1.01 <= val <= 10.0:
-                                                        team_odds = val
-                                                        break
-                                                except ValueError:
-                                                    pass
+                if home_odds is not None and (away_odds is None or home_odds <= away_odds):
+                    selected_team = home
+                    selected_odds = home_odds
+                    pick_type = "Home Win"
+                else:
+                    selected_team = away
+                    selected_odds = away_odds
+                    pick_type = "Away Win"
 
-                                        team_pairs.append({"name": team_name, "odds": team_odds})
-                                    i += 1
+                scraped_matches.append({
+                    "home": home,
+                    "away": away,
+                    "selected_pick": selected_team,
+                    "pick_type": pick_type,
+                    "odds_value": selected_odds,
+                    "kickoff_iso": kickoff_iso,
+                })
 
-                                # Pastikan terdeteksi minimal 2 tim (Home dan Away)
-                                if len(team_pairs) >= 2:
-                                    home_info = team_pairs[0]
-                                    away_info = team_pairs[1]
-
-                                    h_odds = home_info["odds"]
-                                    a_odds = away_info["odds"]
-
-                                    # PERBAIKAN LOGIKA SELEKSI (MENGELIMINASI BIAS 100% AWAY WIN)
-                                    if h_odds and a_odds:
-                                        # Jika kedua odds ada, pilih tim dengan odds favorit (lebih rendah)
-                                        if h_odds <= a_odds:
-                                            selected_team = home_info["name"]
-                                            selected_odds = h_odds
-                                            pick_type = "Home Win"
-                                        else:
-                                            selected_team = away_info["name"]
-                                            selected_odds = a_odds
-                                            pick_type = "Away Win"
-                                    elif h_odds and not a_odds:
-                                        # Jika hanya odds Home yang terbaca, wajib pilih Home Win
-                                        selected_team = home_info["name"]
-                                        selected_odds = h_odds
-                                        pick_type = "Home Win"
-                                    elif a_odds and not h_odds:
-                                        # Jika hanya odds Away yang terbaca, pilih Away Win
-                                        selected_team = away_info["name"]
-                                        selected_odds = a_odds
-                                        pick_type = "Away Win"
-                                    else:
-                                        # Jika kedua odds gagal terbaca, lewati pertandingan ini
-                                        continue
-
-                                    scraped_matches.append({
-                                        "home": home_info["name"],
-                                        "away": away_info["name"],
-                                        "selected_pick": selected_team,
-                                        "pick_type": pick_type,
-                                        "odds_value": selected_odds,
-                                        "kickoff_iso": f"{today_date_str}T20:00:00"
-                                    })
-                    except Exception:
-                        continue
-
-            except Exception as e:
-                print(f"❌ [Scraper Error]: {e}")
-            finally:
-                await context.close()
-                await browser.close()
-                
+        print(f"  [Scraper] Extracted {len(scraped_matches)} unique matches from odds feed.")
         return scraped_matches
+
+    @staticmethod
+    def _clean_team_name(value) -> str:
+        return BeautifulSoup(str(value), "html.parser").get_text(" ", strip=True)
+
+    @staticmethod
+    def _parse_odds(value):
+        try:
+            odds = float(str(value).replace(",", "."))
+        except (TypeError, ValueError):
+            return None
+        return odds if 1.01 <= odds <= 10.0 else None

@@ -1,1 +1,2 @@
 - [Recommendation policy](recommendation-policy.md) — EV eligibility is strict; WhatsApp notifications are not wanted.
+- [Odds feed behavior](odds-feed-behavior.md) — The page is a JavaScript shell; odds arrive from a linked-row feed, not its initial HTML.
