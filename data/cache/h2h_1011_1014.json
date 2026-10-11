@@ -1,0 +1,569 @@
+[
+  {
+    "fixture_id": 32789,
+    "date": "2018-05-19",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": false
+      },
+      "away": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 32909,
+    "date": "2017-10-22",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": false
+      },
+      "away": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 4
+    }
+  },
+  {
+    "fixture_id": 33049,
+    "date": "2017-02-12",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": true
+      },
+      "away": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 33074,
+    "date": "2016-11-20",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": true
+      },
+      "away": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 608339,
+    "date": "2020-11-22",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": null
+      },
+      "away": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 657966,
+    "date": "2021-05-15",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": true
+      },
+      "away": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 5,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 718799,
+    "date": "2021-11-21",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": false
+      },
+      "away": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 718908,
+    "date": "2022-05-22",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": true
+      },
+      "away": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 4,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 1048473,
+    "date": "2023-09-02",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": true
+      },
+      "away": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1222588,
+    "date": "2025-01-26",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": true
+      },
+      "away": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 3,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 1327717,
+    "date": "2025-03-15",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": false
+      },
+      "away": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 1382375,
+    "date": "2025-11-23",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": true
+      },
+      "away": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 1555405,
+    "date": "2026-10-11",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": null
+      },
+      "away": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  },
+  {
+    "fixture_id": 32848,
+    "date": "2018-03-10",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": false
+      },
+      "away": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 4
+    }
+  },
+  {
+    "fixture_id": 32966,
+    "date": "2017-07-22",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": null
+      },
+      "away": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 3,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 32994,
+    "date": "2017-05-07",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": false
+      },
+      "away": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 33128,
+    "date": "2016-08-11",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": true
+      },
+      "away": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 608350,
+    "date": "2020-12-13",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": false
+      },
+      "away": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 657920,
+    "date": "2021-03-20",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": true
+      },
+      "away": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 4,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 718732,
+    "date": "2021-07-24",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": false
+      },
+      "away": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 718821,
+    "date": "2022-01-30",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": false
+      },
+      "away": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 5
+    }
+  },
+  {
+    "fixture_id": 1048551,
+    "date": "2024-01-20",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": false
+      },
+      "away": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1150731,
+    "date": "2024-04-04",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": null
+      },
+      "away": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 3,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 1214831,
+    "date": "2024-08-04",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": false
+      },
+      "away": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 3,
+      "away": 4
+    }
+  },
+  {
+    "fixture_id": 1382321,
+    "date": "2025-08-31",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": false
+      },
+      "away": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 1494535,
+    "date": "2026-02-08",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": null
+      },
+      "away": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1555451,
+    "date": "2026-12-19",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1014,
+        "name": "Lausanne",
+        "winner": null
+      },
+      "away": {
+        "id": 1011,
+        "name": "FC ST. Gallen",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  }
+]

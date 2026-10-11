@@ -1,0 +1,86 @@
+[
+  {
+    "fixture_id": 889967,
+    "date": "2022-06-20",
+    "league": "Friendlies Clubs",
+    "teams": {
+      "home": {
+        "id": 2166,
+        "name": "Orgryte IS",
+        "winner": null
+      },
+      "away": {
+        "id": 367,
+        "name": "BK Hacken",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 1494207,
+    "date": "2026-07-11",
+    "league": "Allsvenskan",
+    "teams": {
+      "home": {
+        "id": 2166,
+        "name": "Orgryte IS",
+        "winner": true
+      },
+      "away": {
+        "id": 367,
+        "name": "BK Hacken",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 4,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 1494293,
+    "date": "2026-10-11",
+    "league": "Allsvenskan",
+    "teams": {
+      "home": {
+        "id": 367,
+        "name": "BK Hacken",
+        "winner": null
+      },
+      "away": {
+        "id": 2166,
+        "name": "Orgryte IS",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  },
+  {
+    "fixture_id": 1502001,
+    "date": "2026-02-14",
+    "league": "Friendlies Clubs",
+    "teams": {
+      "home": {
+        "id": 367,
+        "name": "BK Hacken",
+        "winner": true
+      },
+      "away": {
+        "id": 2166,
+        "name": "Orgryte IS",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 0
+    }
+  }
+]

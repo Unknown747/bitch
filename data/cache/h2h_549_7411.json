@@ -1,0 +1,107 @@
+[
+  {
+    "fixture_id": 1394646,
+    "date": "2026-02-28",
+    "league": "S\u00fcper Lig",
+    "teams": {
+      "home": {
+        "id": 7411,
+        "name": "Kocaelispor",
+        "winner": false
+      },
+      "away": {
+        "id": 549,
+        "name": "Be\u015fikta\u015f",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1489340,
+    "date": "2026-02-05",
+    "league": "T\u00fcrkiye Kupas\u0131",
+    "teams": {
+      "home": {
+        "id": 7411,
+        "name": "Kocaelispor",
+        "winner": null
+      },
+      "away": {
+        "id": 549,
+        "name": "Be\u015fikta\u015f",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1584581,
+    "date": "2027-03-07",
+    "league": "S\u00fcper Lig",
+    "teams": {
+      "home": {
+        "id": 7411,
+        "name": "Kocaelispor",
+        "winner": null
+      },
+      "away": {
+        "id": 549,
+        "name": "Be\u015fikta\u015f",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  },
+  {
+    "fixture_id": 1394488,
+    "date": "2025-09-29",
+    "league": "S\u00fcper Lig",
+    "teams": {
+      "home": {
+        "id": 549,
+        "name": "Be\u015fikta\u015f",
+        "winner": true
+      },
+      "away": {
+        "id": 7411,
+        "name": "Kocaelispor",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 3,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1584422,
+    "date": "2026-10-11",
+    "league": "S\u00fcper Lig",
+    "teams": {
+      "home": {
+        "id": 549,
+        "name": "Be\u015fikta\u015f",
+        "winner": null
+      },
+      "away": {
+        "id": 7411,
+        "name": "Kocaelispor",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  }
+]

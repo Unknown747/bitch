@@ -1,0 +1,548 @@
+[
+  {
+    "fixture_id": 153822,
+    "date": "2019-10-20",
+    "league": "Superliga",
+    "teams": {
+      "home": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": false
+      },
+      "away": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 307734,
+    "date": "2018-02-11",
+    "league": "Superliga",
+    "teams": {
+      "home": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": false
+      },
+      "away": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 307789,
+    "date": "2017-04-09",
+    "league": "Superliga",
+    "teams": {
+      "home": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": false
+      },
+      "away": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 307907,
+    "date": "2016-09-22",
+    "league": "Superliga",
+    "teams": {
+      "home": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": true
+      },
+      "away": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 423415,
+    "date": "2012-05-23",
+    "league": "Superliga",
+    "teams": {
+      "home": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": true
+      },
+      "away": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 578217,
+    "date": "2021-02-14",
+    "league": "Superliga",
+    "teams": {
+      "home": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": false
+      },
+      "away": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 4
+    }
+  },
+  {
+    "fixture_id": 596598,
+    "date": "2020-05-21",
+    "league": "Friendlies Clubs",
+    "teams": {
+      "home": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": true
+      },
+      "away": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 881743,
+    "date": "2023-03-05",
+    "league": "Superliga",
+    "teams": {
+      "home": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": true
+      },
+      "away": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 1034971,
+    "date": "2023-11-26",
+    "league": "Superliga",
+    "teams": {
+      "home": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": null
+      },
+      "away": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 3,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 1205440,
+    "date": "2024-08-04",
+    "league": "Superliga",
+    "teams": {
+      "home": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": false
+      },
+      "away": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 1549077,
+    "date": "2027-02-21",
+    "league": "Superliga",
+    "teams": {
+      "home": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": null
+      },
+      "away": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  },
+  {
+    "fixture_id": 153888,
+    "date": "2020-03-01",
+    "league": "Superliga",
+    "teams": {
+      "home": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": true
+      },
+      "away": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 307615,
+    "date": "2017-07-30",
+    "league": "Superliga",
+    "teams": {
+      "home": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": true
+      },
+      "away": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 5,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 307808,
+    "date": "2017-05-18",
+    "league": "Superliga",
+    "teams": {
+      "home": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": false
+      },
+      "away": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 308017,
+    "date": "2017-03-19",
+    "league": "Superliga",
+    "teams": {
+      "home": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": true
+      },
+      "away": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 3,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 423284,
+    "date": "2011-10-02",
+    "league": "Superliga",
+    "teams": {
+      "home": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": true
+      },
+      "away": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 423352,
+    "date": "2012-03-25",
+    "league": "Superliga",
+    "teams": {
+      "home": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": true
+      },
+      "away": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 578177,
+    "date": "2020-11-30",
+    "league": "Superliga",
+    "teams": {
+      "home": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": true
+      },
+      "away": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 4,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 596633,
+    "date": "2020-05-26",
+    "league": "Friendlies Clubs",
+    "teams": {
+      "home": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": true
+      },
+      "away": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 604371,
+    "date": "2020-09-07",
+    "league": "Friendlies Clubs",
+    "teams": {
+      "home": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": null
+      },
+      "away": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  },
+  {
+    "fixture_id": 826526,
+    "date": "2022-01-22",
+    "league": "Friendlies Clubs",
+    "teams": {
+      "home": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": false
+      },
+      "away": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 4
+    }
+  },
+  {
+    "fixture_id": 870424,
+    "date": "2022-07-05",
+    "league": "Friendlies Clubs",
+    "teams": {
+      "home": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": true
+      },
+      "away": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 881686,
+    "date": "2022-10-02",
+    "league": "Superliga",
+    "teams": {
+      "home": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": null
+      },
+      "away": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 3,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 1034900,
+    "date": "2023-08-13",
+    "league": "Superliga",
+    "teams": {
+      "home": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": true
+      },
+      "away": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 3,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 1205538,
+    "date": "2025-03-03",
+    "league": "Superliga",
+    "teams": {
+      "home": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": null
+      },
+      "away": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1549029,
+    "date": "2026-10-11",
+    "league": "Superliga",
+    "teams": {
+      "home": {
+        "id": 407,
+        "name": "Brondby",
+        "winner": null
+      },
+      "away": {
+        "id": 625,
+        "name": "Lyngby",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  }
+]

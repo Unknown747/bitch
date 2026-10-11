@@ -1,0 +1,674 @@
+[
+  {
+    "fixture_id": 32791,
+    "date": "2018-05-19",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": false
+      },
+      "away": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 32961,
+    "date": "2017-07-29",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": false
+      },
+      "away": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 4
+    }
+  },
+  {
+    "fixture_id": 33040,
+    "date": "2017-02-25",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": false
+      },
+      "away": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 33119,
+    "date": "2016-08-28",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": true
+      },
+      "away": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 4,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 38850,
+    "date": "2018-11-03",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": false
+      },
+      "away": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 38904,
+    "date": "2019-03-09",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": false
+      },
+      "away": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 718792,
+    "date": "2021-11-06",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": null
+      },
+      "away": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 718837,
+    "date": "2022-02-20",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": null
+      },
+      "away": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 872610,
+    "date": "2023-01-21",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": false
+      },
+      "away": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 872675,
+    "date": "2023-04-25",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": true
+      },
+      "away": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 4,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1048493,
+    "date": "2023-09-30",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": false
+      },
+      "away": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1222586,
+    "date": "2025-01-25",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": null
+      },
+      "away": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 1327708,
+    "date": "2025-03-02",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": true
+      },
+      "away": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 1382355,
+    "date": "2025-10-30",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": null
+      },
+      "away": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 3,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 1494532,
+    "date": "2026-02-07",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": null
+      },
+      "away": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1555404,
+    "date": "2026-10-11",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": null
+      },
+      "away": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  },
+  {
+    "fixture_id": 32844,
+    "date": "2018-03-11",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": true
+      },
+      "away": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 3,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 32877,
+    "date": "2017-12-10",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": null
+      },
+      "away": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 33008,
+    "date": "2017-04-17",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": false
+      },
+      "away": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 33089,
+    "date": "2016-10-23",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": true
+      },
+      "away": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 4,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 38801,
+    "date": "2018-07-22",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": true
+      },
+      "away": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 38951,
+    "date": "2019-05-16",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": true
+      },
+      "away": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 6,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 718737,
+    "date": "2021-07-31",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": null
+      },
+      "away": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 718909,
+    "date": "2022-05-22",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": true
+      },
+      "away": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 3,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 826326,
+    "date": "2022-01-15",
+    "league": "Friendlies Clubs",
+    "teams": {
+      "home": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": true
+      },
+      "away": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 5,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 872543,
+    "date": "2022-07-31",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": null
+      },
+      "away": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 872663,
+    "date": "2023-04-10",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": true
+      },
+      "away": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 1048554,
+    "date": "2024-01-20",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": true
+      },
+      "away": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 1150733,
+    "date": "2024-04-04",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": true
+      },
+      "away": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 3,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 1214861,
+    "date": "2024-09-28",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": false
+      },
+      "away": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1382400,
+    "date": "2025-12-17",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": false
+      },
+      "away": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 6
+    }
+  },
+  {
+    "fixture_id": 1555477,
+    "date": "2027-02-07",
+    "league": "Super League",
+    "teams": {
+      "home": {
+        "id": 565,
+        "name": "BSC Young Boys",
+        "winner": null
+      },
+      "away": {
+        "id": 1013,
+        "name": "Grasshoppers",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  }
+]

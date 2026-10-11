@@ -1,0 +1,149 @@
+[
+  {
+    "fixture_id": 1166374,
+    "date": "2024-08-07",
+    "league": "J1 League",
+    "teams": {
+      "home": {
+        "id": 306,
+        "name": "Tokyo Verdy",
+        "winner": false
+      },
+      "away": {
+        "id": 282,
+        "name": "Sanfrecce Hiroshima",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1197547,
+    "date": "2024-05-22",
+    "league": "J-League Cup",
+    "teams": {
+      "home": {
+        "id": 306,
+        "name": "Tokyo Verdy",
+        "winner": false
+      },
+      "away": {
+        "id": 282,
+        "name": "Sanfrecce Hiroshima",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 1324214,
+    "date": "2025-08-23",
+    "league": "J1 League",
+    "teams": {
+      "home": {
+        "id": 306,
+        "name": "Tokyo Verdy",
+        "winner": false
+      },
+      "away": {
+        "id": 282,
+        "name": "Sanfrecce Hiroshima",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 1556090,
+    "date": "2026-10-11",
+    "league": "J1 League",
+    "teams": {
+      "home": {
+        "id": 306,
+        "name": "Tokyo Verdy",
+        "winner": null
+      },
+      "away": {
+        "id": 282,
+        "name": "Sanfrecce Hiroshima",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  },
+  {
+    "fixture_id": 1166304,
+    "date": "2024-06-15",
+    "league": "J1 League",
+    "teams": {
+      "home": {
+        "id": 282,
+        "name": "Sanfrecce Hiroshima",
+        "winner": true
+      },
+      "away": {
+        "id": 306,
+        "name": "Tokyo Verdy",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 4,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1324121,
+    "date": "2025-05-17",
+    "league": "J1 League",
+    "teams": {
+      "home": {
+        "id": 282,
+        "name": "Sanfrecce Hiroshima",
+        "winner": true
+      },
+      "away": {
+        "id": 306,
+        "name": "Tokyo Verdy",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1556217,
+    "date": "2027-02-20",
+    "league": "J1 League",
+    "teams": {
+      "home": {
+        "id": 282,
+        "name": "Sanfrecce Hiroshima",
+        "winner": null
+      },
+      "away": {
+        "id": 306,
+        "name": "Tokyo Verdy",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  }
+]

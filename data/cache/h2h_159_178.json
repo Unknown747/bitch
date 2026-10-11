@@ -1,0 +1,212 @@
+[
+  {
+    "fixture_id": 719391,
+    "date": "2021-09-17",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 159,
+        "name": "Hertha Berlin",
+        "winner": true
+      },
+      "away": {
+        "id": 178,
+        "name": "SpVgg Greuther Furth",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1048603,
+    "date": "2023-08-26",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 159,
+        "name": "Hertha Berlin",
+        "winner": true
+      },
+      "away": {
+        "id": 178,
+        "name": "SpVgg Greuther Furth",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 5,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 1226447,
+    "date": "2025-05-04",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 159,
+        "name": "Hertha BSC",
+        "winner": true
+      },
+      "away": {
+        "id": 178,
+        "name": "SpVgg Greuther F\u00fcrth",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 1388905,
+    "date": "2026-05-10",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 159,
+        "name": "Hertha BSC",
+        "winner": true
+      },
+      "away": {
+        "id": 178,
+        "name": "SpVgg Greuther F\u00fcrth",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1576192,
+    "date": "2026-10-11",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 159,
+        "name": "Hertha BSC",
+        "winner": null
+      },
+      "away": {
+        "id": 178,
+        "name": "SpVgg Greuther F\u00fcrth",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  },
+  {
+    "fixture_id": 719546,
+    "date": "2022-02-12",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 178,
+        "name": "SpVgg Greuther Furth",
+        "winner": true
+      },
+      "away": {
+        "id": 159,
+        "name": "Hertha Berlin",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1048760,
+    "date": "2024-02-11",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 178,
+        "name": "SpVgg Greuther Furth",
+        "winner": false
+      },
+      "away": {
+        "id": 159,
+        "name": "Hertha Berlin",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 1226295,
+    "date": "2024-12-07",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 178,
+        "name": "SpVgg Greuther F\u00fcrth",
+        "winner": true
+      },
+      "away": {
+        "id": 159,
+        "name": "Hertha BSC",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1388752,
+    "date": "2025-12-12",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 178,
+        "name": "SpVgg Greuther F\u00fcrth",
+        "winner": null
+      },
+      "away": {
+        "id": 159,
+        "name": "Hertha BSC",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 3,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 1576343,
+    "date": "2027-03-02",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 178,
+        "name": "SpVgg Greuther F\u00fcrth",
+        "winner": null
+      },
+      "away": {
+        "id": 159,
+        "name": "Hertha BSC",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  }
+]

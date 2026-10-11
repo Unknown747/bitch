@@ -1,0 +1,527 @@
+[
+  {
+    "fixture_id": 20550,
+    "date": "2017-03-18",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": true
+      },
+      "away": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 204283,
+    "date": "2014-01-12",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": false
+      },
+      "away": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 204737,
+    "date": "2013-03-08",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": true
+      },
+      "away": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 205191,
+    "date": "2012-04-15",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": true
+      },
+      "away": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 214364,
+    "date": "2020-07-08",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": true
+      },
+      "away": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 3,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 605266,
+    "date": "2021-02-01",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": true
+      },
+      "away": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 721032,
+    "date": "2022-04-03",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": true
+      },
+      "away": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 4,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 877963,
+    "date": "2022-08-26",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": true
+      },
+      "away": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 986143,
+    "date": "2023-01-18",
+    "league": "Copa del Rey",
+    "teams": {
+      "home": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": false
+      },
+      "away": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 1038055,
+    "date": "2023-10-29",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": true
+      },
+      "away": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1208802,
+    "date": "2025-05-11",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": null
+      },
+      "away": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1390881,
+    "date": "2025-09-28",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": true
+      },
+      "away": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 1570405,
+    "date": "2026-10-11",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": null
+      },
+      "away": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  },
+  {
+    "fixture_id": 20743,
+    "date": "2016-10-21",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": false
+      },
+      "away": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 204475,
+    "date": "2014-05-18",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": true
+      },
+      "away": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 204554,
+    "date": "2012-10-21",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": null
+      },
+      "away": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 205003,
+    "date": "2011-12-04",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": true
+      },
+      "away": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 214068,
+    "date": "2019-09-20",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": null
+      },
+      "away": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 605182,
+    "date": "2020-12-06",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": false
+      },
+      "away": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 720795,
+    "date": "2021-09-23",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": false
+      },
+      "away": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 878236,
+    "date": "2023-04-22",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": true
+      },
+      "away": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 3,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 1038287,
+    "date": "2024-05-05",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": false
+      },
+      "away": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 1208581,
+    "date": "2024-10-19",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": false
+      },
+      "away": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 1391125,
+    "date": "2026-04-12",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": null
+      },
+      "away": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1570689,
+    "date": "2027-05-16",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 727,
+        "name": "Osasuna",
+        "winner": null
+      },
+      "away": {
+        "id": 543,
+        "name": "Real Betis",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  }
+]

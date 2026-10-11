@@ -1,0 +1,506 @@
+[
+  {
+    "fixture_id": 2556,
+    "date": "2018-09-25",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 160,
+        "name": "SC Freiburg",
+        "winner": true
+      },
+      "away": {
+        "id": 174,
+        "name": "FC Schalke 04",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 11134,
+    "date": "2017-11-04",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 160,
+        "name": "SC Freiburg",
+        "winner": false
+      },
+      "away": {
+        "id": 174,
+        "name": "FC Schalke 04",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 16723,
+    "date": "2017-05-07",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 160,
+        "name": "SC Freiburg",
+        "winner": true
+      },
+      "away": {
+        "id": 174,
+        "name": "FC Schalke 04",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 194968,
+    "date": "2014-11-08",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 160,
+        "name": "SC Freiburg",
+        "winner": true
+      },
+      "away": {
+        "id": 174,
+        "name": "FC Schalke 04",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 195472,
+    "date": "2014-05-03",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 160,
+        "name": "SC Freiburg",
+        "winner": false
+      },
+      "away": {
+        "id": 174,
+        "name": "FC Schalke 04",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 195787,
+    "date": "2013-05-18",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 160,
+        "name": "SC Freiburg",
+        "winner": false
+      },
+      "away": {
+        "id": 174,
+        "name": "FC Schalke 04",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 196001,
+    "date": "2012-03-03",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 160,
+        "name": "SC Freiburg",
+        "winner": true
+      },
+      "away": {
+        "id": 174,
+        "name": "FC Schalke 04",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 196140,
+    "date": "2010-09-22",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 160,
+        "name": "SC Freiburg",
+        "winner": false
+      },
+      "away": {
+        "id": 174,
+        "name": "FC Schalke 04",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 209217,
+    "date": "2020-06-27",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 160,
+        "name": "SC Freiburg",
+        "winner": true
+      },
+      "away": {
+        "id": 174,
+        "name": "FC Schalke 04",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 4,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 587433,
+    "date": "2021-04-17",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 160,
+        "name": "SC Freiburg",
+        "winner": true
+      },
+      "away": {
+        "id": 174,
+        "name": "FC Schalke 04",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 4,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 871418,
+    "date": "2023-04-23",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 160,
+        "name": "SC Freiburg",
+        "winner": true
+      },
+      "away": {
+        "id": 174,
+        "name": "FC Schalke 04",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 4,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 1575179,
+    "date": "2026-10-11",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 160,
+        "name": "SC Freiburg",
+        "winner": null
+      },
+      "away": {
+        "id": 174,
+        "name": "FC Schalke 04",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  },
+  {
+    "fixture_id": 2711,
+    "date": "2019-02-16",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 174,
+        "name": "FC Schalke 04",
+        "winner": null
+      },
+      "away": {
+        "id": 160,
+        "name": "SC Freiburg",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 10980,
+    "date": "2018-03-31",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 174,
+        "name": "FC Schalke 04",
+        "winner": true
+      },
+      "away": {
+        "id": 160,
+        "name": "SC Freiburg",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 16880,
+    "date": "2016-12-17",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 174,
+        "name": "FC Schalke 04",
+        "winner": null
+      },
+      "away": {
+        "id": 160,
+        "name": "SC Freiburg",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 195118,
+    "date": "2015-04-11",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 174,
+        "name": "FC Schalke 04",
+        "winner": null
+      },
+      "away": {
+        "id": 160,
+        "name": "SC Freiburg",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 195321,
+    "date": "2013-12-15",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 174,
+        "name": "FC Schalke 04",
+        "winner": true
+      },
+      "away": {
+        "id": 160,
+        "name": "SC Freiburg",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 195635,
+    "date": "2012-12-15",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 174,
+        "name": "FC Schalke 04",
+        "winner": false
+      },
+      "away": {
+        "id": 160,
+        "name": "SC Freiburg",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 195846,
+    "date": "2011-09-24",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 174,
+        "name": "FC Schalke 04",
+        "winner": true
+      },
+      "away": {
+        "id": 160,
+        "name": "SC Freiburg",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 4,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 196290,
+    "date": "2011-02-12",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 174,
+        "name": "FC Schalke 04",
+        "winner": true
+      },
+      "away": {
+        "id": 160,
+        "name": "SC Freiburg",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 209064,
+    "date": "2019-12-21",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 174,
+        "name": "FC Schalke 04",
+        "winner": null
+      },
+      "away": {
+        "id": 160,
+        "name": "SC Freiburg",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 587279,
+    "date": "2020-12-16",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 174,
+        "name": "FC Schalke 04",
+        "winner": false
+      },
+      "away": {
+        "id": 160,
+        "name": "SC Freiburg",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 871270,
+    "date": "2022-10-30",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 174,
+        "name": "FC Schalke 04",
+        "winner": false
+      },
+      "away": {
+        "id": 160,
+        "name": "SC Freiburg",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 1575336,
+    "date": "2027-02-20",
+    "league": "Bundesliga",
+    "teams": {
+      "home": {
+        "id": 174,
+        "name": "FC Schalke 04",
+        "winner": null
+      },
+      "away": {
+        "id": 160,
+        "name": "SC Freiburg",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  }
+]

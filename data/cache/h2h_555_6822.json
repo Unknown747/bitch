@@ -1,0 +1,65 @@
+[
+  {
+    "fixture_id": 1561464,
+    "date": "2026-12-05",
+    "league": "Premier League",
+    "teams": {
+      "home": {
+        "id": 6822,
+        "name": "Rodina Moskva",
+        "winner": null
+      },
+      "away": {
+        "id": 555,
+        "name": "CSKA Moscow",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  },
+  {
+    "fixture_id": 1157161,
+    "date": "2024-02-16",
+    "league": "Friendlies Clubs",
+    "teams": {
+      "home": {
+        "id": 555,
+        "name": "CSKA Moscow",
+        "winner": true
+      },
+      "away": {
+        "id": 6822,
+        "name": "Rodina Moskva",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 4,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 1561404,
+    "date": "2026-10-11",
+    "league": "Premier League",
+    "teams": {
+      "home": {
+        "id": 555,
+        "name": "CSKA Moscow",
+        "winner": null
+      },
+      "away": {
+        "id": 6822,
+        "name": "Rodina Moskva",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  }
+]

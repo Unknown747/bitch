@@ -1,0 +1,212 @@
+[
+  {
+    "fixture_id": 27842,
+    "date": "2019-03-17",
+    "league": "Segunda Divisi\u00f3n",
+    "teams": {
+      "home": {
+        "id": 534,
+        "name": "Las Palmas",
+        "winner": false
+      },
+      "away": {
+        "id": 798,
+        "name": "Mallorca",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 607047,
+    "date": "2021-04-04",
+    "league": "Segunda Divisi\u00f3n",
+    "teams": {
+      "home": {
+        "id": 534,
+        "name": "Las Palmas",
+        "winner": null
+      },
+      "away": {
+        "id": 798,
+        "name": "Mallorca",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1037957,
+    "date": "2023-08-12",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 534,
+        "name": "Las Palmas",
+        "winner": null
+      },
+      "away": {
+        "id": 798,
+        "name": "Mallorca",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1208614,
+    "date": "2024-11-23",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 534,
+        "name": "Las Palmas",
+        "winner": false
+      },
+      "away": {
+        "id": 798,
+        "name": "Mallorca",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 1570242,
+    "date": "2027-04-11",
+    "league": "Segunda Divisi\u00f3n",
+    "teams": {
+      "home": {
+        "id": 534,
+        "name": "Las Palmas",
+        "winner": null
+      },
+      "away": {
+        "id": 798,
+        "name": "Mallorca",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  },
+  {
+    "fixture_id": 27636,
+    "date": "2018-10-27",
+    "league": "Segunda Divisi\u00f3n",
+    "teams": {
+      "home": {
+        "id": 798,
+        "name": "Mallorca",
+        "winner": null
+      },
+      "away": {
+        "id": 534,
+        "name": "Las Palmas",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 606913,
+    "date": "2021-01-10",
+    "league": "Segunda Divisi\u00f3n",
+    "teams": {
+      "home": {
+        "id": 798,
+        "name": "Mallorca",
+        "winner": false
+      },
+      "away": {
+        "id": 534,
+        "name": "Las Palmas",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1038301,
+    "date": "2024-05-11",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 798,
+        "name": "Mallorca",
+        "winner": true
+      },
+      "away": {
+        "id": 534,
+        "name": "Las Palmas",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 1208708,
+    "date": "2025-02-16",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 798,
+        "name": "Mallorca",
+        "winner": true
+      },
+      "away": {
+        "id": 534,
+        "name": "Las Palmas",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 3,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1569966,
+    "date": "2026-10-11",
+    "league": "Segunda Divisi\u00f3n",
+    "teams": {
+      "home": {
+        "id": 798,
+        "name": "Mallorca",
+        "winner": null
+      },
+      "away": {
+        "id": 534,
+        "name": "Las Palmas",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  }
+]

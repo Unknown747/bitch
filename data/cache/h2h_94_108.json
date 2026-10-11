@@ -1,0 +1,275 @@
+[
+  {
+    "fixture_id": 187333,
+    "date": "2012-03-11",
+    "league": "Ligue 1",
+    "teams": {
+      "home": {
+        "id": 94,
+        "name": "Rennes",
+        "winner": null
+      },
+      "away": {
+        "id": 108,
+        "name": "Auxerre",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 187729,
+    "date": "2011-04-02",
+    "league": "Ligue 1",
+    "teams": {
+      "home": {
+        "id": 94,
+        "name": "Rennes",
+        "winner": null
+      },
+      "away": {
+        "id": 108,
+        "name": "Auxerre",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 871538,
+    "date": "2022-09-11",
+    "league": "Ligue 1",
+    "teams": {
+      "home": {
+        "id": 94,
+        "name": "Rennes",
+        "winner": true
+      },
+      "away": {
+        "id": 108,
+        "name": "Auxerre",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 5,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 1213998,
+    "date": "2025-04-06",
+    "league": "Ligue 1",
+    "teams": {
+      "home": {
+        "id": 94,
+        "name": "Rennes",
+        "winner": false
+      },
+      "away": {
+        "id": 108,
+        "name": "Auxerre",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1387768,
+    "date": "2025-10-19",
+    "league": "Ligue 1",
+    "teams": {
+      "home": {
+        "id": 94,
+        "name": "Rennes",
+        "winner": null
+      },
+      "away": {
+        "id": 108,
+        "name": "Auxerre",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 1552781,
+    "date": "2026-10-11",
+    "league": "Ligue 1",
+    "teams": {
+      "home": {
+        "id": 94,
+        "name": "Rennes",
+        "winner": null
+      },
+      "away": {
+        "id": 108,
+        "name": "Auxerre",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  },
+  {
+    "fixture_id": 187172,
+    "date": "2011-10-23",
+    "league": "Ligue 1",
+    "teams": {
+      "home": {
+        "id": 108,
+        "name": "Auxerre",
+        "winner": false
+      },
+      "away": {
+        "id": 94,
+        "name": "Rennes",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 187571,
+    "date": "2010-11-14",
+    "league": "Ligue 1",
+    "teams": {
+      "home": {
+        "id": 108,
+        "name": "Auxerre",
+        "winner": true
+      },
+      "away": {
+        "id": 94,
+        "name": "Rennes",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 526909,
+    "date": "2014-02-12",
+    "league": "Coupe de France",
+    "teams": {
+      "home": {
+        "id": 108,
+        "name": "Auxerre",
+        "winner": false
+      },
+      "away": {
+        "id": 94,
+        "name": "Rennes",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 871731,
+    "date": "2023-03-11",
+    "league": "Ligue 1",
+    "teams": {
+      "home": {
+        "id": 108,
+        "name": "Auxerre",
+        "winner": null
+      },
+      "away": {
+        "id": 94,
+        "name": "Rennes",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 1213828,
+    "date": "2024-11-03",
+    "league": "Ligue 1",
+    "teams": {
+      "home": {
+        "id": 108,
+        "name": "Auxerre",
+        "winner": true
+      },
+      "away": {
+        "id": 94,
+        "name": "Rennes",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 4,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 1387897,
+    "date": "2026-02-22",
+    "league": "Ligue 1",
+    "teams": {
+      "home": {
+        "id": 108,
+        "name": "Auxerre",
+        "winner": false
+      },
+      "away": {
+        "id": 94,
+        "name": "Rennes",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 1553008,
+    "date": "2027-05-16",
+    "league": "Ligue 1",
+    "teams": {
+      "home": {
+        "id": 108,
+        "name": "Auxerre",
+        "winner": null
+      },
+      "away": {
+        "id": 94,
+        "name": "Rennes",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  }
+]

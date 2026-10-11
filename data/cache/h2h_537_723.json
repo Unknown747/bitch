@@ -1,0 +1,191 @@
+[
+  {
+    "fixture_id": 606911,
+    "date": "2021-02-17",
+    "league": "Segunda Divisi\u00f3n",
+    "teams": {
+      "home": {
+        "id": 537,
+        "name": "Leganes",
+        "winner": true
+      },
+      "away": {
+        "id": 723,
+        "name": "Almeria",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 721715,
+    "date": "2022-05-29",
+    "league": "Segunda Divisi\u00f3n",
+    "teams": {
+      "home": {
+        "id": 537,
+        "name": "Leganes",
+        "winner": null
+      },
+      "away": {
+        "id": 723,
+        "name": "Almeria",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 1391928,
+    "date": "2025-11-22",
+    "league": "Segunda Divisi\u00f3n",
+    "teams": {
+      "home": {
+        "id": 537,
+        "name": "Leganes",
+        "winner": false
+      },
+      "away": {
+        "id": 723,
+        "name": "Almeria",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 1570230,
+    "date": "2027-04-04",
+    "league": "Segunda Divisi\u00f3n",
+    "teams": {
+      "home": {
+        "id": 537,
+        "name": "Leganes",
+        "winner": null
+      },
+      "away": {
+        "id": 723,
+        "name": "Almeria",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  },
+  {
+    "fixture_id": 607019,
+    "date": "2021-03-27",
+    "league": "Segunda Divisi\u00f3n",
+    "teams": {
+      "home": {
+        "id": 723,
+        "name": "Almeria",
+        "winner": null
+      },
+      "away": {
+        "id": 537,
+        "name": "Leganes",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 721399,
+    "date": "2021-10-29",
+    "league": "Segunda Divisi\u00f3n",
+    "teams": {
+      "home": {
+        "id": 723,
+        "name": "Almeria",
+        "winner": true
+      },
+      "away": {
+        "id": 537,
+        "name": "Leganes",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 1334032,
+    "date": "2025-01-15",
+    "league": "Copa del Rey",
+    "teams": {
+      "home": {
+        "id": 723,
+        "name": "Almeria",
+        "winner": false
+      },
+      "away": {
+        "id": 537,
+        "name": "Leganes",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 1392136,
+    "date": "2026-04-05",
+    "league": "Segunda Divisi\u00f3n",
+    "teams": {
+      "home": {
+        "id": 723,
+        "name": "Almeria",
+        "winner": true
+      },
+      "away": {
+        "id": 537,
+        "name": "Leganes",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1569959,
+    "date": "2026-10-11",
+    "league": "Segunda Divisi\u00f3n",
+    "teams": {
+      "home": {
+        "id": 723,
+        "name": "Almeria",
+        "winner": null
+      },
+      "away": {
+        "id": 537,
+        "name": "Leganes",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  }
+]

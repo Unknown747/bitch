@@ -1,0 +1,296 @@
+[
+  {
+    "fixture_id": 9862,
+    "date": "2017-09-10",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 544,
+        "name": "Deportivo La Coruna",
+        "winner": false
+      },
+      "away": {
+        "id": 548,
+        "name": "Real Sociedad",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 4
+    }
+  },
+  {
+    "fixture_id": 20684,
+    "date": "2016-12-05",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 544,
+        "name": "Deportivo La Coruna",
+        "winner": true
+      },
+      "away": {
+        "id": 548,
+        "name": "Real Sociedad",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 5,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 203339,
+    "date": "2015-08-22",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 544,
+        "name": "Deportivo La Coruna",
+        "winner": null
+      },
+      "away": {
+        "id": 548,
+        "name": "Real Sociedad",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 203831,
+    "date": "2014-11-22",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 544,
+        "name": "Deportivo La Coruna",
+        "winner": null
+      },
+      "away": {
+        "id": 548,
+        "name": "Real Sociedad",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 204851,
+    "date": "2013-06-01",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 544,
+        "name": "Deportivo La Coruna",
+        "winner": false
+      },
+      "away": {
+        "id": 548,
+        "name": "Real Sociedad",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 205479,
+    "date": "2011-03-07",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 544,
+        "name": "Deportivo La Coruna",
+        "winner": true
+      },
+      "away": {
+        "id": 548,
+        "name": "Real Sociedad",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1570577,
+    "date": "2027-02-21",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 544,
+        "name": "Deportivo La Coruna",
+        "winner": null
+      },
+      "away": {
+        "id": 548,
+        "name": "Real Sociedad",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  },
+  {
+    "fixture_id": 9678,
+    "date": "2018-02-02",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 548,
+        "name": "Real Sociedad",
+        "winner": true
+      },
+      "away": {
+        "id": 544,
+        "name": "Deportivo La Coruna",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 5,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 20499,
+    "date": "2017-04-23",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 548,
+        "name": "Real Sociedad",
+        "winner": true
+      },
+      "away": {
+        "id": 544,
+        "name": "Deportivo La Coruna",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 203530,
+    "date": "2016-01-16",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 548,
+        "name": "Real Sociedad",
+        "winner": null
+      },
+      "away": {
+        "id": 544,
+        "name": "Deportivo La Coruna",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 204024,
+    "date": "2015-04-12",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 548,
+        "name": "Real Sociedad",
+        "winner": null
+      },
+      "away": {
+        "id": 544,
+        "name": "Deportivo La Coruna",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 204663,
+    "date": "2013-01-13",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 548,
+        "name": "Real Sociedad",
+        "winner": null
+      },
+      "away": {
+        "id": 544,
+        "name": "Deportivo La Coruna",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 205308,
+    "date": "2010-10-25",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 548,
+        "name": "Real Sociedad",
+        "winner": true
+      },
+      "away": {
+        "id": 544,
+        "name": "Deportivo La Coruna",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 3,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 1570412,
+    "date": "2026-10-11",
+    "league": "La Liga",
+    "teams": {
+      "home": {
+        "id": 548,
+        "name": "Real Sociedad",
+        "winner": null
+      },
+      "away": {
+        "id": 544,
+        "name": "Deportivo La Coruna",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  }
+]

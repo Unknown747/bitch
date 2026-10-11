@@ -1,0 +1,170 @@
+[
+  {
+    "fixture_id": 882057,
+    "date": "2023-04-02",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 1579,
+        "name": "Monza",
+        "winner": false
+      },
+      "away": {
+        "id": 487,
+        "name": "Lazio",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 1052597,
+    "date": "2024-05-04",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 1579,
+        "name": "Monza",
+        "winner": null
+      },
+      "away": {
+        "id": 487,
+        "name": "Lazio",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 1223712,
+    "date": "2024-11-10",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 1579,
+        "name": "Monza",
+        "winner": false
+      },
+      "away": {
+        "id": 487,
+        "name": "Lazio",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1550296,
+    "date": "2027-01-24",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 1579,
+        "name": "Monza",
+        "winner": null
+      },
+      "away": {
+        "id": 487,
+        "name": "Lazio",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  },
+  {
+    "fixture_id": 881914,
+    "date": "2022-11-10",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 487,
+        "name": "Lazio",
+        "winner": true
+      },
+      "away": {
+        "id": 1579,
+        "name": "Monza",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 1052296,
+    "date": "2023-09-23",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 487,
+        "name": "Lazio",
+        "winner": null
+      },
+      "away": {
+        "id": 1579,
+        "name": "Monza",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1223830,
+    "date": "2025-02-09",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 487,
+        "name": "Lazio",
+        "winner": true
+      },
+      "away": {
+        "id": 1579,
+        "name": "Monza",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 5,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1550142,
+    "date": "2026-10-11",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 487,
+        "name": "Lazio",
+        "winner": null
+      },
+      "away": {
+        "id": 1579,
+        "name": "Monza",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  }
+]

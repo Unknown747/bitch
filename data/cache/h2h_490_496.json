@@ -1,0 +1,653 @@
+[
+  {
+    "fixture_id": 9045,
+    "date": "2017-08-19",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": true
+      },
+      "away": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 3,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 21621,
+    "date": "2016-09-21",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": true
+      },
+      "away": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 4,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 29094,
+    "date": "2018-11-03",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": true
+      },
+      "away": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 3,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 197123,
+    "date": "2015-05-09",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": null
+      },
+      "away": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 197535,
+    "date": "2014-05-18",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": true
+      },
+      "away": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 3,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 197903,
+    "date": "2013-05-11",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": null
+      },
+      "away": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 198098,
+    "date": "2012-01-15",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": null
+      },
+      "away": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 198352,
+    "date": "2010-09-26",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": true
+      },
+      "away": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 4,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 232698,
+    "date": "2020-01-06",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": true
+      },
+      "away": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 4,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 608608,
+    "date": "2020-11-21",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": true
+      },
+      "away": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 731768,
+    "date": "2021-12-21",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": true
+      },
+      "away": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 1052366,
+    "date": "2023-11-11",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": true
+      },
+      "away": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1223660,
+    "date": "2024-10-06",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": null
+      },
+      "away": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1308634,
+    "date": "2024-12-17",
+    "league": "Coppa Italia",
+    "teams": {
+      "home": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": true
+      },
+      "away": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 4,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 1377988,
+    "date": "2025-11-29",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": true
+      },
+      "away": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1550294,
+    "date": "2027-01-24",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": null
+      },
+      "away": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  },
+  {
+    "fixture_id": 8848,
+    "date": "2018-01-06",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": false
+      },
+      "away": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 21427,
+    "date": "2017-02-12",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": false
+      },
+      "away": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 29282,
+    "date": "2019-04-02",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": false
+      },
+      "away": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 196933,
+    "date": "2014-12-18",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": false
+      },
+      "away": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 197347,
+    "date": "2014-01-12",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": false
+      },
+      "away": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 4
+    }
+  },
+  {
+    "fixture_id": 197714,
+    "date": "2012-12-21",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": false
+      },
+      "away": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 198291,
+    "date": "2012-05-06",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": false
+      },
+      "away": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 198534,
+    "date": "2011-02-05",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": false
+      },
+      "away": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 232888,
+    "date": "2020-07-29",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": true
+      },
+      "away": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 608798,
+    "date": "2021-03-14",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": false
+      },
+      "away": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 731895,
+    "date": "2022-04-09",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": false
+      },
+      "away": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 1052573,
+    "date": "2024-04-19",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": null
+      },
+      "away": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 1223845,
+    "date": "2025-02-23",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": false
+      },
+      "away": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1378065,
+    "date": "2026-01-17",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": true
+      },
+      "away": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 1550138,
+    "date": "2026-10-11",
+    "league": "Serie A",
+    "teams": {
+      "home": {
+        "id": 490,
+        "name": "Cagliari",
+        "winner": null
+      },
+      "away": {
+        "id": 496,
+        "name": "Juventus",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  }
+]

@@ -1,0 +1,485 @@
+[
+  {
+    "fixture_id": 17119,
+    "date": "2017-02-27",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 186,
+        "name": "FC St. Pauli",
+        "winner": true
+      },
+      "away": {
+        "id": 785,
+        "name": "Karlsruher SC",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 5,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 209323,
+    "date": "2019-11-02",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 186,
+        "name": "FC St. Pauli",
+        "winner": null
+      },
+      "away": {
+        "id": 785,
+        "name": "Karlsruher SC",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 556479,
+    "date": "2015-12-18",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 186,
+        "name": "FC St. Pauli",
+        "winner": false
+      },
+      "away": {
+        "id": 785,
+        "name": "Karlsruher SC",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 556716,
+    "date": "2014-10-25",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 186,
+        "name": "FC St. Pauli",
+        "winner": false
+      },
+      "away": {
+        "id": 785,
+        "name": "Karlsruher SC",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 4
+    }
+  },
+  {
+    "fixture_id": 557090,
+    "date": "2013-12-20",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 186,
+        "name": "FC St. Pauli",
+        "winner": false
+      },
+      "away": {
+        "id": 785,
+        "name": "Karlsruher SC",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 557760,
+    "date": "2012-03-12",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 186,
+        "name": "FC St. Pauli",
+        "winner": true
+      },
+      "away": {
+        "id": 785,
+        "name": "Karlsruher SC",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 585124,
+    "date": "2020-11-08",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 186,
+        "name": "FC St. Pauli",
+        "winner": false
+      },
+      "away": {
+        "id": 785,
+        "name": "Karlsruher SC",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 719264,
+    "date": "2022-03-05",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 186,
+        "name": "FC St. Pauli",
+        "winner": true
+      },
+      "away": {
+        "id": 785,
+        "name": "Karlsruher SC",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 3,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 873160,
+    "date": "2023-05-28",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 186,
+        "name": "FC St. Pauli",
+        "winner": null
+      },
+      "away": {
+        "id": 785,
+        "name": "Karlsruher SC",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1048667,
+    "date": "2023-10-28",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 186,
+        "name": "FC St. Pauli",
+        "winner": true
+      },
+      "away": {
+        "id": 785,
+        "name": "Karlsruher SC",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1403551,
+    "date": "2025-07-20",
+    "league": "Friendlies Clubs",
+    "teams": {
+      "home": {
+        "id": 186,
+        "name": "FC St. Pauli",
+        "winner": true
+      },
+      "away": {
+        "id": 785,
+        "name": "Karlsruher SC",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 6,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1576195,
+    "date": "2026-10-11",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 186,
+        "name": "FC St. Pauli",
+        "winner": null
+      },
+      "away": {
+        "id": 785,
+        "name": "Karlsruher SC",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  },
+  {
+    "fixture_id": 17274,
+    "date": "2016-09-18",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 785,
+        "name": "Karlsruher SC",
+        "winner": null
+      },
+      "away": {
+        "id": 186,
+        "name": "FC St. Pauli",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 209480,
+    "date": "2020-05-30",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 785,
+        "name": "Karlsruher SC",
+        "winner": null
+      },
+      "away": {
+        "id": 186,
+        "name": "FC St. Pauli",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 556331,
+    "date": "2015-08-02",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 785,
+        "name": "Karlsruher SC",
+        "winner": false
+      },
+      "away": {
+        "id": 186,
+        "name": "FC St. Pauli",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 556866,
+    "date": "2015-04-10",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 785,
+        "name": "Karlsruher SC",
+        "winner": true
+      },
+      "away": {
+        "id": 186,
+        "name": "FC St. Pauli",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 3,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 556941,
+    "date": "2013-07-27",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 785,
+        "name": "Karlsruher SC",
+        "winner": null
+      },
+      "away": {
+        "id": 186,
+        "name": "FC St. Pauli",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 557607,
+    "date": "2011-09-19",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 785,
+        "name": "Karlsruher SC",
+        "winner": false
+      },
+      "away": {
+        "id": 186,
+        "name": "FC St. Pauli",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 2
+    }
+  },
+  {
+    "fixture_id": 585276,
+    "date": "2021-03-06",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 785,
+        "name": "Karlsruher SC",
+        "winner": null
+      },
+      "away": {
+        "id": 186,
+        "name": "FC St. Pauli",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "fixture_id": 719107,
+    "date": "2021-09-25",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 785,
+        "name": "Karlsruher SC",
+        "winner": false
+      },
+      "away": {
+        "id": 186,
+        "name": "FC St. Pauli",
+        "winner": true
+      }
+    },
+    "score": {
+      "home": 1,
+      "away": 3
+    }
+  },
+  {
+    "fixture_id": 873013,
+    "date": "2022-11-12",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 785,
+        "name": "Karlsruher SC",
+        "winner": null
+      },
+      "away": {
+        "id": 186,
+        "name": "FC St. Pauli",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": 4,
+      "away": 4
+    }
+  },
+  {
+    "fixture_id": 1048821,
+    "date": "2024-04-06",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 785,
+        "name": "Karlsruher SC",
+        "winner": true
+      },
+      "away": {
+        "id": 186,
+        "name": "FC St. Pauli",
+        "winner": false
+      }
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "fixture_id": 1576347,
+    "date": "2027-03-02",
+    "league": "2. Bundesliga",
+    "teams": {
+      "home": {
+        "id": 785,
+        "name": "Karlsruher SC",
+        "winner": null
+      },
+      "away": {
+        "id": 186,
+        "name": "FC St. Pauli",
+        "winner": null
+      }
+    },
+    "score": {
+      "home": null,
+      "away": null
+    }
+  }
+]
